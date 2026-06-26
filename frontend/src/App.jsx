@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './App.css'
+const API_URL = import.meta.env.VITE_API_URL;
 
 const App = () => {
   const [msg, setmsg] = useState("")
@@ -24,7 +25,7 @@ const App = () => {
     setloading(true)
 
     try {
-      let res = await fetch("http://127.0.0.1:8000/uploads", {
+      let res = await fetch(API_URL, {
         method: "POST",
         body: formData
       })
