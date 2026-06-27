@@ -13,6 +13,12 @@ const App = () => {
   const [weaknesses, setweaknesses] = useState([])
   const [loading, setloading] = useState(false)
 
+  useEffect(() => {
+  console.log("API URL:", API_URL);
+
+  }, [])
+  
+
 
   let uploaded = async () => {
     if (!file) {
