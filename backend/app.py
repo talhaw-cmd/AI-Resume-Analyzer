@@ -21,8 +21,9 @@ app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
+        "https://ai-resume-analyzer-two-hazel.vercel.app",
         "http://localhost:5173",
-        "https://ai-resume-analyzer-two-hazel.vercel.app"
+        "http://localhost:3000",
     ],
     allow_credentials=True,
     allow_methods=["*"],
